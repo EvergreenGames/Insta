@@ -18,6 +18,7 @@
 		8AE9ECD524B3C2C1004CC13A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE9ECD424B3C2C1004CC13A /* main.m */; };
 		8AE9ECDF24B3C2C1004CC13A /* InstaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE9ECDE24B3C2C1004CC13A /* InstaTests.m */; };
 		8AE9ECEA24B3C2C1004CC13A /* InstaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE9ECE924B3C2C1004CC13A /* InstaUITests.m */; };
+		8AE9ECF924B3E1AC004CC13A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE9ECF824B3E1AC004CC13A /* HomeViewController.m */; };
 		914280097759F65C55BE541B /* Pods_InstaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD16109EAEDAC4A65ECF1AB /* Pods_InstaTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,8 @@
 		8AE9ECE524B3C2C1004CC13A /* InstaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AE9ECE924B3C2C1004CC13A /* InstaUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstaUITests.m; sourceTree = "<group>"; };
 		8AE9ECEB24B3C2C1004CC13A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AE9ECF724B3E1AC004CC13A /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		8AE9ECF824B3E1AC004CC13A /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		B8C5A4A4A47DAC5CFC15AB8E /* Pods-InstaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaTests.debug.xcconfig"; path = "Target Support Files/Pods-InstaTests/Pods-InstaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BF6883E775A472A580A38885 /* Pods-InstaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaTests.release.xcconfig"; path = "Target Support Files/Pods-InstaTests/Pods-InstaTests.release.xcconfig"; sourceTree = "<group>"; };
 		DDE810EAD3E1735D7C125E95 /* Pods_Insta_InstaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Insta_InstaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +135,8 @@
 				8AE9ECD024B3C2C1004CC13A /* LaunchScreen.storyboard */,
 				8AE9ECD324B3C2C1004CC13A /* Info.plist */,
 				8AE9ECD424B3C2C1004CC13A /* main.m */,
+				8AE9ECF724B3E1AC004CC13A /* HomeViewController.h */,
+				8AE9ECF824B3E1AC004CC13A /* HomeViewController.m */,
 			);
 			path = Insta;
 			sourceTree = "<group>";
@@ -418,6 +423,7 @@
 				8AE9ECCA24B3C2C0004CC13A /* LoginViewController.m in Sources */,
 				8AE9ECC424B3C2C0004CC13A /* AppDelegate.m in Sources */,
 				8AE9ECD524B3C2C1004CC13A /* main.m in Sources */,
+				8AE9ECF924B3E1AC004CC13A /* HomeViewController.m in Sources */,
 				8AE9ECC724B3C2C0004CC13A /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

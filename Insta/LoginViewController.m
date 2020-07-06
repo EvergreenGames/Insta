@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "SceneDelegate.h"
 #import <Parse/Parse.h>
 
 @interface LoginViewController ()
@@ -42,7 +43,7 @@
         }
         else{
             NSLog(@"Created User: %@", newUser.username);
-            
+            [self loginUser];
         }
     }];
 }
@@ -57,8 +58,17 @@
         }
         else{
             NSLog(@"Login Successful");
+            [self switchToMainView];
         }
     }];
+}
+
+- (void)switchToMainView {
+    SceneDelegate* sceneDelegate = (SceneDelegate*)self.view.window.windowScene.delegate;
+    
+    UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UINavigationController* homeViewController = [storyboard instantiateViewControllerWithIdentifier:@"HomeFeedNavigationController"];
+    sceneDelegate.window.rootViewController = homeViewController;
 }
 
 @end
