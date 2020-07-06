@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,7 +11,7 @@
 		484C2663EE6B75C02C255239 /* Pods_Insta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F70DBE19F3B0BE5F53CB7E6 /* Pods_Insta.framework */; };
 		8AE9ECC424B3C2C0004CC13A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE9ECC324B3C2C0004CC13A /* AppDelegate.m */; };
 		8AE9ECC724B3C2C0004CC13A /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE9ECC624B3C2C0004CC13A /* SceneDelegate.m */; };
-		8AE9ECCA24B3C2C0004CC13A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE9ECC924B3C2C0004CC13A /* ViewController.m */; };
+		8AE9ECCA24B3C2C0004CC13A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE9ECC924B3C2C0004CC13A /* LoginViewController.m */; };
 		8AE9ECCD24B3C2C0004CC13A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AE9ECCB24B3C2C0004CC13A /* Main.storyboard */; };
 		8AE9ECCF24B3C2C1004CC13A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AE9ECCE24B3C2C1004CC13A /* Assets.xcassets */; };
 		8AE9ECD224B3C2C1004CC13A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AE9ECD024B3C2C1004CC13A /* LaunchScreen.storyboard */; };
@@ -50,8 +50,8 @@
 		8AE9ECC324B3C2C0004CC13A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8AE9ECC524B3C2C0004CC13A /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		8AE9ECC624B3C2C0004CC13A /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		8AE9ECC824B3C2C0004CC13A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8AE9ECC924B3C2C0004CC13A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8AE9ECC824B3C2C0004CC13A /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		8AE9ECC924B3C2C0004CC13A /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		8AE9ECCC24B3C2C0004CC13A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8AE9ECCE24B3C2C1004CC13A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AE9ECD124B3C2C1004CC13A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -125,8 +125,8 @@
 				8AE9ECC324B3C2C0004CC13A /* AppDelegate.m */,
 				8AE9ECC524B3C2C0004CC13A /* SceneDelegate.h */,
 				8AE9ECC624B3C2C0004CC13A /* SceneDelegate.m */,
-				8AE9ECC824B3C2C0004CC13A /* ViewController.h */,
-				8AE9ECC924B3C2C0004CC13A /* ViewController.m */,
+				8AE9ECC824B3C2C0004CC13A /* LoginViewController.h */,
+				8AE9ECC924B3C2C0004CC13A /* LoginViewController.m */,
 				8AE9ECCB24B3C2C0004CC13A /* Main.storyboard */,
 				8AE9ECCE24B3C2C1004CC13A /* Assets.xcassets */,
 				8AE9ECD024B3C2C1004CC13A /* LaunchScreen.storyboard */,
@@ -164,7 +164,6 @@
 				B8C5A4A4A47DAC5CFC15AB8E /* Pods-InstaTests.debug.xcconfig */,
 				BF6883E775A472A580A38885 /* Pods-InstaTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -416,7 +415,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AE9ECCA24B3C2C0004CC13A /* ViewController.m in Sources */,
+				8AE9ECCA24B3C2C0004CC13A /* LoginViewController.m in Sources */,
 				8AE9ECC424B3C2C0004CC13A /* AppDelegate.m in Sources */,
 				8AE9ECD524B3C2C1004CC13A /* main.m in Sources */,
 				8AE9ECC724B3C2C0004CC13A /* SceneDelegate.m in Sources */,
