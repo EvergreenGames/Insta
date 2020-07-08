@@ -8,9 +8,14 @@
 
 #import "HomeViewController.h"
 #import "SceneDelegate.h"
-#import <Parse/Parse.h>
+#import <Parse.h>
+#import "Post.h"
+#import "PostCell.h"
 
-@interface HomeViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface HomeViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) NSArray<Post*>* posts;
 
 @end
 
@@ -18,7 +23,50 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
+    [self loadDataWithCompletion:nil];
+    
+    UIRefreshControl* refreshControl = [UIRefreshControl new];
+    [refreshControl addTarget:self action:@selector(refreshAction:) forControlEvents:UIControlEventValueChanged];
+    [self.tableView insertSubview:refreshControl atIndex:0];
+}
+
+- (void)loadDataWithCompletion:(void (^)(void))completion{
+    PFQuery* query = [Post query];
+    [query orderByDescending:@"createdAt"];
+    [query includeKey:@"author"];
+    query.limit = 20;
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        if(error){
+            NSLog(@"Error fetching posts: %@", error.localizedDescription);
+            return;
+        }
+        
+        self.posts = objects;
+        
+        [self.tableView reloadData];
+        if(completion) completion();
+    }];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.posts.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    PostCell* cell = [tableView dequeueReusableCellWithIdentifier:@"PostCell"];
+    cell.post = self.posts[indexPath.row];
+    return cell;
+}
+
+- (void)refreshAction:(UIRefreshControl*)refreshControl{
+    [self loadDataWithCompletion:^{
+        [refreshControl endRefreshing];
+    }];
 }
 
 - (IBAction)didTapLogout:(id)sender {
