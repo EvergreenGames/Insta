@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		28E9431E9986CD0665DC0162 /* Pods_Insta_InstaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDE810EAD3E1735D7C125E95 /* Pods_Insta_InstaUITests.framework */; };
 		484C2663EE6B75C02C255239 /* Pods_Insta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F70DBE19F3B0BE5F53CB7E6 /* Pods_Insta.framework */; };
+		8A8046BD24B5227100C9DED1 /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8046BC24B5227100C9DED1 /* ComposeViewController.m */; };
+		8A8046C024B562F000C9DED1 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8046BF24B562F000C9DED1 /* Post.m */; };
 		8AE9ECC424B3C2C0004CC13A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE9ECC324B3C2C0004CC13A /* AppDelegate.m */; };
 		8AE9ECC724B3C2C0004CC13A /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE9ECC624B3C2C0004CC13A /* SceneDelegate.m */; };
 		8AE9ECCA24B3C2C0004CC13A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE9ECC924B3C2C0004CC13A /* LoginViewController.m */; };
@@ -46,6 +48,10 @@
 		7AD16109EAEDAC4A65ECF1AB /* Pods_InstaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B01C036FB5891B4726466A4 /* Pods-Insta-InstaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Insta-InstaUITests.debug.xcconfig"; path = "Target Support Files/Pods-Insta-InstaUITests/Pods-Insta-InstaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		821C7843DBBADD9DBA35E1EF /* Pods-Insta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Insta.debug.xcconfig"; path = "Target Support Files/Pods-Insta/Pods-Insta.debug.xcconfig"; sourceTree = "<group>"; };
+		8A8046BB24B5227100C9DED1 /* ComposeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComposeViewController.h; sourceTree = "<group>"; };
+		8A8046BC24B5227100C9DED1 /* ComposeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComposeViewController.m; sourceTree = "<group>"; };
+		8A8046BE24B562F000C9DED1 /* Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
+		8A8046BF24B562F000C9DED1 /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
 		8AE9ECBF24B3C2C0004CC13A /* Insta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Insta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AE9ECC224B3C2C0004CC13A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8AE9ECC324B3C2C0004CC13A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -137,6 +143,10 @@
 				8AE9ECD424B3C2C1004CC13A /* main.m */,
 				8AE9ECF724B3E1AC004CC13A /* HomeViewController.h */,
 				8AE9ECF824B3E1AC004CC13A /* HomeViewController.m */,
+				8A8046BB24B5227100C9DED1 /* ComposeViewController.h */,
+				8A8046BC24B5227100C9DED1 /* ComposeViewController.m */,
+				8A8046BE24B562F000C9DED1 /* Post.h */,
+				8A8046BF24B562F000C9DED1 /* Post.m */,
 			);
 			path = Insta;
 			sourceTree = "<group>";
@@ -423,8 +433,10 @@
 				8AE9ECCA24B3C2C0004CC13A /* LoginViewController.m in Sources */,
 				8AE9ECC424B3C2C0004CC13A /* AppDelegate.m in Sources */,
 				8AE9ECD524B3C2C1004CC13A /* main.m in Sources */,
+				8A8046BD24B5227100C9DED1 /* ComposeViewController.m in Sources */,
 				8AE9ECF924B3E1AC004CC13A /* HomeViewController.m in Sources */,
 				8AE9ECC724B3C2C0004CC13A /* SceneDelegate.m in Sources */,
+				8A8046C024B562F000C9DED1 /* Post.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

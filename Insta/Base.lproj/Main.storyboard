@@ -104,11 +104,80 @@
                                 <action selector="didTapLogout:" destination="LNz-6r-3Ve" id="4Dv-Yi-dwM"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="insta_camera_btn" id="hjp-9f-eGz">
+                            <connections>
+                                <segue destination="Xsu-ht-RQD" kind="presentation" id="C2f-7T-atS"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YYk-PX-Vek" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2172" y="126"/>
+        </scene>
+        <!--Compose View Controller-->
+        <scene sceneID="BPS-fg-hdH">
+            <objects>
+                <viewController id="HTe-En-LJ5" customClass="ComposeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wBy-9E-h00">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="mqb-6a-0TR">
+                                <rect key="frame" x="20" y="76" width="128" height="128"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="K1i-eK-IdJ"/>
+                                    <constraint firstAttribute="height" constant="128" id="eqQ-WG-B3X"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="40q-L5-1dg" appends="YES" id="NWZ-07-jke"/>
+                                </connections>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" text="Write a caption..." translatesAutoresizingMaskIntoConstraints="NO" id="vaX-xc-DHT">
+                                <rect key="frame" x="156" y="76" width="238" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="mqb-6a-0TR" firstAttribute="top" secondItem="bSj-g5-BNX" secondAttribute="top" constant="20" id="ADg-Ss-fVw"/>
+                            <constraint firstItem="mqb-6a-0TR" firstAttribute="leading" secondItem="bSj-g5-BNX" secondAttribute="leading" constant="20" id="W4z-SA-Ynk"/>
+                            <constraint firstItem="vaX-xc-DHT" firstAttribute="leading" secondItem="mqb-6a-0TR" secondAttribute="trailing" constant="8" id="Xi0-O4-vIG"/>
+                            <constraint firstItem="vaX-xc-DHT" firstAttribute="top" secondItem="mqb-6a-0TR" secondAttribute="top" id="kYP-gZ-Cgw"/>
+                            <constraint firstItem="bSj-g5-BNX" firstAttribute="trailing" secondItem="vaX-xc-DHT" secondAttribute="trailing" constant="20" id="lA5-lM-1Sw"/>
+                            <constraint firstItem="vaX-xc-DHT" firstAttribute="bottom" secondItem="mqb-6a-0TR" secondAttribute="bottom" id="qxj-g9-QAi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bSj-g5-BNX"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="t9D-UX-hXp">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="64M-Lq-hT4">
+                            <connections>
+                                <action selector="cancelAction:" destination="HTe-En-LJ5" id="Mvj-z0-C37"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Share" id="LQC-hI-MXc">
+                            <connections>
+                                <action selector="shareAction:" destination="HTe-En-LJ5" id="08q-tj-7bp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="captionTextField" destination="vaX-xc-DHT" id="JHV-Xt-rJg"/>
+                        <outlet property="contentImageView" destination="mqb-6a-0TR" id="8y9-DB-hGY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zc3-ty-Gex" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="40q-L5-1dg">
+                    <connections>
+                        <action selector="chooseImageAction:" destination="HTe-En-LJ5" id="kfF-3R-JdU"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="4100" y="125.89285714285714"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lle-UO-DkC">
@@ -128,5 +197,27 @@
             </objects>
             <point key="canvasLocation" x="1157" y="126"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rdc-Ma-YSG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xsu-ht-RQD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="N5p-lU-Aku">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HTe-En-LJ5" kind="relationship" relationship="rootViewController" id="L7F-9j-Lc9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MzM-GZ-XAE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3189.8550724637685" y="125.89285714285714"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="image_placeholder" width="375" height="375"/>
+        <image name="insta_camera_btn" width="25" height="25"/>
+    </resources>
 </document>

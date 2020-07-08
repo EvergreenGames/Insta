@@ -10,7 +10,7 @@
 #import "SceneDelegate.h"
 #import <Parse/Parse.h>
 
-@interface HomeViewController ()
+@interface HomeViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @end
 
