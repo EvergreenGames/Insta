@@ -34,8 +34,9 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey,id> *)info{
     UIImage* editedImage = info[UIImagePickerControllerEditedImage];
+    UIImage* resizedImage = [self resizeImage:editedImage withSize:CGSizeMake(512, 512)];
     
-    [self.contentImageView setImage:editedImage];
+    [self.contentImageView setImage:resizedImage];
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -71,6 +72,20 @@
             [self dismissViewControllerAnimated:YES completion:nil];
         }
     }];
+}
+
+- (UIImage *)resizeImage:(UIImage *)image withSize:(CGSize)size {
+    UIImageView *resizeImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height)];
+    
+    resizeImageView.contentMode = UIViewContentModeScaleAspectFill;
+    resizeImageView.image = image;
+    
+    UIGraphicsBeginImageContext(size);
+    [resizeImageView.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return newImage;
 }
 
 /*
