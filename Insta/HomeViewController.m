@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#import "DetailsViewController.h"
 #import "SceneDelegate.h"
 #import <Parse.h>
 #import "Post.h"
@@ -85,14 +86,21 @@
     }];
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if([segue.identifier isEqualToString:@"detailSegue"]){
+        UITableViewCell* sourceCell = sender;
+        NSIndexPath* sourceIndex = [self.tableView indexPathForCell:sourceCell];
+        
+        DetailsViewController* detailsController = [segue destinationViewController];
+        detailsController.post = self.posts[sourceIndex.row];
+    }
 }
-*/
+
 
 @end

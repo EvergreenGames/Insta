@@ -12,6 +12,7 @@
 		8A8046BD24B5227100C9DED1 /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8046BC24B5227100C9DED1 /* ComposeViewController.m */; };
 		8A8046C024B562F000C9DED1 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8046BF24B562F000C9DED1 /* Post.m */; };
 		8A8046C524B663AC00C9DED1 /* PostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8046C424B663AC00C9DED1 /* PostCell.m */; };
+		8ADBEC3924B6823C006FE159 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADBEC3824B6823C006FE159 /* DetailsViewController.m */; };
 		8AE9ECC424B3C2C0004CC13A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE9ECC324B3C2C0004CC13A /* AppDelegate.m */; };
 		8AE9ECC724B3C2C0004CC13A /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE9ECC624B3C2C0004CC13A /* SceneDelegate.m */; };
 		8AE9ECCA24B3C2C0004CC13A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE9ECC924B3C2C0004CC13A /* LoginViewController.m */; };
@@ -54,6 +55,8 @@
 		8A8046BF24B562F000C9DED1 /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
 		8A8046C324B663AC00C9DED1 /* PostCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostCell.h; sourceTree = "<group>"; };
 		8A8046C424B663AC00C9DED1 /* PostCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostCell.m; sourceTree = "<group>"; };
+		8ADBEC3724B6823C006FE159 /* DetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		8ADBEC3824B6823C006FE159 /* DetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 		8AE9ECBF24B3C2C0004CC13A /* Insta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Insta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AE9ECC224B3C2C0004CC13A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8AE9ECC324B3C2C0004CC13A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -140,6 +143,8 @@
 				8AE9ECC824B3C2C0004CC13A /* LoginViewController.h */,
 				8AE9ECC924B3C2C0004CC13A /* LoginViewController.m */,
 				8AE9ECCB24B3C2C0004CC13A /* Main.storyboard */,
+				8ADBEC3724B6823C006FE159 /* DetailsViewController.h */,
+				8ADBEC3824B6823C006FE159 /* DetailsViewController.m */,
 				8A8046C324B663AC00C9DED1 /* PostCell.h */,
 				8A8046C424B663AC00C9DED1 /* PostCell.m */,
 				8AE9ECCE24B3C2C1004CC13A /* Assets.xcassets */,
@@ -441,6 +446,7 @@
 				8A8046C524B663AC00C9DED1 /* PostCell.m in Sources */,
 				8A8046BD24B5227100C9DED1 /* ComposeViewController.m in Sources */,
 				8AE9ECF924B3E1AC004CC13A /* HomeViewController.m in Sources */,
+				8ADBEC3924B6823C006FE159 /* DetailsViewController.m in Sources */,
 				8AE9ECC724B3C2C0004CC13A /* SceneDelegate.m in Sources */,
 				8A8046C024B562F000C9DED1 /* Post.m in Sources */,
 			);
