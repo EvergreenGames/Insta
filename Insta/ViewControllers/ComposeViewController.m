@@ -8,6 +8,7 @@
 
 #import "ComposeViewController.h"
 #import "Post.h"
+#import <MBProgressHUD.h>
 
 @interface ComposeViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -55,10 +56,13 @@
     
     [self presentViewController:alertController animated:YES completion:nil];
 }
+
 - (IBAction)cancelAction:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
 - (IBAction)shareAction:(id)sender {
+    [MBProgressHUD showHUDAddedTo:self.view animated:true];
     [Post postUserImage:self.contentImageView.image withCaption:self.captionTextField.text withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
         if(error){
             NSLog(@"Error uploading post: %@", error.localizedDescription);
@@ -66,6 +70,7 @@
         else{
             [self dismissViewControllerAnimated:YES completion:nil];
         }
+        [MBProgressHUD hideHUDForView:self.view animated:true];
     }];
 }
 
