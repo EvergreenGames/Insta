@@ -44,12 +44,16 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
         if(error){
             NSLog(@"Error fetching posts: %@", error.localizedDescription);
-            return;
+            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error" message:@"Failed to retrieve posts" preferredStyle:(UIAlertControllerStyleAlert)];
+            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+            [alert addAction:okAction];
+            [self presentViewController:alert animated:true completion:nil];
         }
+        else{
+            self.posts = objects;
         
-        self.posts = objects;
-        
-        [self.tableView reloadData];
+            [self.tableView reloadData];
+        }
         if(completion) completion();
     }];
 }
@@ -74,6 +78,10 @@
     [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
         if(error){
             NSLog(@"Error logging out: %@", error.localizedDescription);
+            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error" message:@"Failed to log out" preferredStyle:(UIAlertControllerStyleAlert)];
+            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+            [alert addAction:okAction];
+            [self presentViewController:alert animated:true completion:nil];
         }
         else{
             SceneDelegate* sceneDelegate = (SceneDelegate*)self.view.window.windowScene.delegate;

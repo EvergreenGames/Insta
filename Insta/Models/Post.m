@@ -15,6 +15,7 @@
 @dynamic author;
 @dynamic caption;
 @dynamic image;
+@dynamic likeCount;
 
 + (nonnull NSString*) parseClassName {
     return @"Post";
@@ -25,6 +26,7 @@
     newPost.image = [self getPFFileFromImage:image];
     newPost.author = PFUser.currentUser;
     newPost.caption = caption;
+    newPost.likeCount = @(0);
     
     [newPost saveInBackgroundWithBlock:completion];
 }
