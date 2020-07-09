@@ -111,6 +111,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A627BAB24B7CCC300ABF2BD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8AE9ECC824B3C2C0004CC13A /* LoginViewController.h */,
+				8AE9ECC924B3C2C0004CC13A /* LoginViewController.m */,
+				8ADBEC3724B6823C006FE159 /* DetailsViewController.h */,
+				8ADBEC3824B6823C006FE159 /* DetailsViewController.m */,
+				8AE9ECF724B3E1AC004CC13A /* HomeViewController.h */,
+				8AE9ECF824B3E1AC004CC13A /* HomeViewController.m */,
+				8A8046BB24B5227100C9DED1 /* ComposeViewController.h */,
+				8A8046BC24B5227100C9DED1 /* ComposeViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8A627BAC24B7CCEF00ABF2BD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8A8046BE24B562F000C9DED1 /* Post.h */,
+				8A8046BF24B562F000C9DED1 /* Post.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8A627BAD24B7CD0F00ABF2BD /* ViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				8A8046C324B663AC00C9DED1 /* PostCell.h */,
+				8A8046C424B663AC00C9DED1 /* PostCell.m */,
+			);
+			path = ViewCells;
+			sourceTree = "<group>";
+		};
 		8AE9ECB624B3C2C0004CC13A = {
 			isa = PBXGroup;
 			children = (
@@ -136,27 +169,18 @@
 		8AE9ECC124B3C2C0004CC13A /* Insta */ = {
 			isa = PBXGroup;
 			children = (
+				8A627BAD24B7CD0F00ABF2BD /* ViewCells */,
+				8A627BAC24B7CCEF00ABF2BD /* Models */,
+				8A627BAB24B7CCC300ABF2BD /* ViewControllers */,
 				8AE9ECC224B3C2C0004CC13A /* AppDelegate.h */,
 				8AE9ECC324B3C2C0004CC13A /* AppDelegate.m */,
 				8AE9ECC524B3C2C0004CC13A /* SceneDelegate.h */,
 				8AE9ECC624B3C2C0004CC13A /* SceneDelegate.m */,
-				8AE9ECC824B3C2C0004CC13A /* LoginViewController.h */,
-				8AE9ECC924B3C2C0004CC13A /* LoginViewController.m */,
 				8AE9ECCB24B3C2C0004CC13A /* Main.storyboard */,
-				8ADBEC3724B6823C006FE159 /* DetailsViewController.h */,
-				8ADBEC3824B6823C006FE159 /* DetailsViewController.m */,
-				8A8046C324B663AC00C9DED1 /* PostCell.h */,
-				8A8046C424B663AC00C9DED1 /* PostCell.m */,
 				8AE9ECCE24B3C2C1004CC13A /* Assets.xcassets */,
 				8AE9ECD024B3C2C1004CC13A /* LaunchScreen.storyboard */,
 				8AE9ECD324B3C2C1004CC13A /* Info.plist */,
 				8AE9ECD424B3C2C1004CC13A /* main.m */,
-				8AE9ECF724B3E1AC004CC13A /* HomeViewController.h */,
-				8AE9ECF824B3E1AC004CC13A /* HomeViewController.m */,
-				8A8046BB24B5227100C9DED1 /* ComposeViewController.h */,
-				8A8046BC24B5227100C9DED1 /* ComposeViewController.m */,
-				8A8046BE24B562F000C9DED1 /* Post.h */,
-				8A8046BF24B562F000C9DED1 /* Post.m */,
 			);
 			path = Insta;
 			sourceTree = "<group>";

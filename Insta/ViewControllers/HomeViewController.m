@@ -76,7 +76,6 @@
             NSLog(@"Error logging out: %@", error.localizedDescription);
         }
         else{
-            //Refactor this
             SceneDelegate* sceneDelegate = (SceneDelegate*)self.view.window.windowScene.delegate;
             
             UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
