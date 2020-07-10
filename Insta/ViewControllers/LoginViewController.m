@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "SceneDelegate.h"
 #import <Parse/Parse.h>
+#import "ErrorMessageView.h"
 
 @interface LoginViewController ()
 
@@ -35,10 +36,7 @@
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
         if(error){
             NSLog(@"Error creating user: %@", error.localizedDescription);
-            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error" message:@"Failed to sign up. Please try again." preferredStyle:(UIAlertControllerStyleAlert)];
-            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
-            [alert addAction:okAction];
-            [self presentViewController:alert animated:true completion:nil];
+            [ErrorMessageView errorMessageWithString:@"Failed to create account. Please try again."];
         }
         else{
             NSLog(@"Created User: %@", newUser.username);
@@ -51,13 +49,15 @@
     NSString* username = self.usernameTextField.text;
     NSString* password = self.passwordTextField.text;
     
+    if([username length] == 0 || [password length] == 0){
+        [ErrorMessageView errorMessageWithString:@"Please enter a username/password"];
+        return;
+    }
+    
     [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser * _Nullable user, NSError * _Nullable error) {
         if(error){
             NSLog(@"Login Failed: %@", error.localizedDescription);
-            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error" message:@"Failed to log in" preferredStyle:(UIAlertControllerStyleAlert)];
-            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
-            [alert addAction:okAction];
-            [self presentViewController:alert animated:true completion:nil];
+            [ErrorMessageView errorMessageWithString:@"Failed to login"];
         }
         else{
             NSLog(@"Login Successful");

@@ -9,6 +9,7 @@
 #import "ComposeViewController.h"
 #import "Post.h"
 #import <MBProgressHUD.h>
+#import "ErrorMessageView.h"
 
 @interface ComposeViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -66,10 +67,7 @@
     [Post postUserImage:self.contentImageView.image withCaption:self.captionTextField.text withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
         if(error){
             NSLog(@"Error uploading post: %@", error.localizedDescription);
-            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error" message:@"Failed to post" preferredStyle:(UIAlertControllerStyleAlert)];
-            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
-            [alert addAction:okAction];
-            [self presentViewController:alert animated:true completion:nil];
+            [ErrorMessageView errorMessageWithString:@"Failed to post"];
         }
         else{
             [self dismissViewControllerAnimated:YES completion:nil];

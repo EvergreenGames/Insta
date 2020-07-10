@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		01C8A4BB2D67EC34F63AD228 /* libPods-InstaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C01DDBFE7AC01940282E69 /* libPods-InstaTests.a */; };
 		0F2C1E702EADF19DDFA49C24 /* libPods-Insta-InstaUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C044F6FC4A0CEBCB3556DE34 /* libPods-Insta-InstaUITests.a */; };
+		8A18293924B91B020075EDF4 /* ErrorMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A18293824B91B020075EDF4 /* ErrorMessageView.m */; };
 		8A8046BD24B5227100C9DED1 /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8046BC24B5227100C9DED1 /* ComposeViewController.m */; };
 		8A8046C024B562F000C9DED1 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8046BF24B562F000C9DED1 /* Post.m */; };
 		8A8046C524B663AC00C9DED1 /* PostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8046C424B663AC00C9DED1 /* PostCell.m */; };
@@ -49,6 +50,8 @@
 		5559D021FDA08F0A8D75215F /* Pods-Insta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Insta.release.xcconfig"; path = "Target Support Files/Pods-Insta/Pods-Insta.release.xcconfig"; sourceTree = "<group>"; };
 		7B01C036FB5891B4726466A4 /* Pods-Insta-InstaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Insta-InstaUITests.debug.xcconfig"; path = "Target Support Files/Pods-Insta-InstaUITests/Pods-Insta-InstaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		821C7843DBBADD9DBA35E1EF /* Pods-Insta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Insta.debug.xcconfig"; path = "Target Support Files/Pods-Insta/Pods-Insta.debug.xcconfig"; sourceTree = "<group>"; };
+		8A18293724B91B020075EDF4 /* ErrorMessageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ErrorMessageView.h; sourceTree = "<group>"; };
+		8A18293824B91B020075EDF4 /* ErrorMessageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ErrorMessageView.m; sourceTree = "<group>"; };
 		8A8046BB24B5227100C9DED1 /* ComposeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComposeViewController.h; sourceTree = "<group>"; };
 		8A8046BC24B5227100C9DED1 /* ComposeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComposeViewController.m; sourceTree = "<group>"; };
 		8A8046BE24B562F000C9DED1 /* Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
@@ -122,6 +125,8 @@
 				8AE9ECF824B3E1AC004CC13A /* HomeViewController.m */,
 				8A8046BB24B5227100C9DED1 /* ComposeViewController.h */,
 				8A8046BC24B5227100C9DED1 /* ComposeViewController.m */,
+				8A18293724B91B020075EDF4 /* ErrorMessageView.h */,
+				8A18293824B91B020075EDF4 /* ErrorMessageView.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -471,6 +476,7 @@
 				8A8046BD24B5227100C9DED1 /* ComposeViewController.m in Sources */,
 				8AE9ECF924B3E1AC004CC13A /* HomeViewController.m in Sources */,
 				8ADBEC3924B6823C006FE159 /* DetailsViewController.m in Sources */,
+				8A18293924B91B020075EDF4 /* ErrorMessageView.m in Sources */,
 				8AE9ECC724B3C2C0004CC13A /* SceneDelegate.m in Sources */,
 				8A8046C024B562F000C9DED1 /* Post.m in Sources */,
 			);
